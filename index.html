@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ message }}</p>
+  <ul>
+    <li v-for="(match, index) in matches">
+      Match {{index + 1}}
+      <ul>
+        <li v-for="thing in match">
+          {{thing.name}} - {{thing.kills}}
+        </li>
+      </ul>
+        <br/>
+    </li>
+  </ul>
+
+</div>
+
+<script src="vuejs/matches.js"></script>
