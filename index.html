@@ -1,19 +1,39 @@
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-
-<div id="app">
-  <p>{{ message }}</p>
-  <ul>
-    <li v-for="(match, index) in matches">
-      Match {{index + 1}}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <title></title>
+    <style navigation>
+      nav {
+        color: red;
+        width: 100%;
+        height: 60px;
+        background: #1e142f;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="navigation">
+        <navigation></navigation>
+      </div>
+      <p>{{ message }}</p>
       <ul>
-        <li v-for="thing in match">
-          {{thing.name}} - {{thing.kills}}
+        <li v-for="(match, index) in matches">
+          Match {{index + 1}}
+          <ul>
+            <li v-for="thing in match">
+              {{thing.name}} - {{thing.kills}}
+            </li>
+          </ul>
+            <br/>
         </li>
       </ul>
-        <br/>
-    </li>
-  </ul>
 
-</div>
+    </div>
+  </body>
+</html>
 
 <script src="vuejs/matches.js"></script>

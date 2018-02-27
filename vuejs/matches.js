@@ -19,3 +19,13 @@ new Vue({
     ]
   }
 })
+
+// register
+Vue.component('navigation', {
+  template: '<nav>A custom component!</nav>'
+})
+
+// create a root instance
+new Vue({
+  el: '#navigation'
+})
